@@ -28,16 +28,50 @@
     </a>
 </div>
                 <div class="leftcolumn">
-                    <div>
-     <div class="card">
-    <h2 class="bigtitle">RSA Idioten</h2>
-    <div style="clear: both;"></div>
-    <div class="desctext">
-        <div class="desc">
-            <p>Сайт, чтобы решать простые задачки по атакам на <strong>RSA</strong>. </p>
-        </div>
-        <a href="/2019/12/26/rsa-idioten/#more">Читать далее</a>
-        <span class="tag">
+                    <div class="block">
+    <div class="row">
+        <div>
+            <div class="card">
+                <h5 class="date">
+                    <time
+                        datetime="2019-12-26T14:54:57.000Z"
+                        itemprop="datePublished"
+                        >26-12-2019</time
+                    >
+                    
+                </h5>
+                <div class=" bigtitle">RSA Idioten</div>
+                <div style="clear: both;"></div>
+                <div class="mdtext">
+                    <p>Сайт, чтобы решать простые задачки по атакам на <strong>RSA</strong>. </p>
+<a id="more"></a> 
+<p><a href="https://zpix1.github.io/rsa-idioten/">https://zpix1.github.io/rsa-idioten/</a></p>
+<p>Допустим у вас есть все составляющие шифра, вы умудрились разложить  <strong>N</strong> на простые множители, и вроде бы решение уже в кармане, но тут и начинается суета: нужно очень быстро запустить питон, вспомнить либы или написать свои костыли, правильно перевести плейнтекст в ASCII, чтобы получить флаг - это может растянуться 30 минут, которых на реальном соревновании у вас  не будет.</p>
+<p>Итак, что же позволяет делать <strong>RSA Idioten</strong>?</p>
+<p>Основные функции:</p>
+<ul>
+<li>Расшифровать криптотекст по <strong>n</strong>, <strong>p</strong>, <strong>q</strong> и получить флаг</li>
+<li>Увидеть <strong>&phi;</strong> и <strong>d</strong> и в случае чего заменить их без проблем</li>
+<li>Зашифровать свой текст</li>
+<li>Провести атаки на модуль:<ol>
+<li>Факторизация ферма</li>
+<li>Брутфорс</li>
+<li>Запрос к factordb.com (в разработке)</li>
+</ol>
+</li>
+</ul>
+<p>Посмотрим как он работает на примере:</p>
+<p>Задачка с недавнего KubanCSC CTF 2019 (crypto500): </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n &#x3D; 633218484847468368525848301443122306786970110976718111805273874695786406863674759414074655209372506662667267208258185661226506428878056806546282568747105193734939031530813064575924532743694757739704330167664865505156148938567160679003150091858433397041289157128561024140039009</span><br><span class="line">e &#x3D; 65537</span><br><span class="line">c &#x3D; 196861313436631945084256699689158643644449003934727236542183343068022623494397258019325423764867902560172776979655372294633294297958994673135262727582114494314072891721910285311725828366707897149422512258310528909945193111695037095582882667208418890039051046563981775959997591</span><br></pre></td></tr></table></figure>
+
+
+<p>Не будем долго думать, мы же idioten, подставим N на сайт и понажимаем кнопочки:<br><img src="https://i.imgur.com/b2GzkiQ.png" alt="fermat"></p>
+<p>Опа, да это же квадрат! Факторизация ферма сразу нашла нужное разложение. Дальше дело техники:<br><img src="https://imgur.com/cgiOcH6.png" alt="d"><br>Нашли функцию эйлера и закрытый ключ<br><img src="https://imgur.com/prCjpZB.png" alt="flag"><br>Вставляем криптотекст и получаем флаг! Очень быстро и удобно, рекомендую.</p>
+<p><a href="https://zpix1.github.io/rsa-idioten/">https://zpix1.github.io/rsa-idioten/</a></p>
+
+                </div>
+                <span class="tag">
+                    
     
         <a href="/tags/Programming/">Programming</a> | 
     
@@ -45,25 +79,11 @@
     
         <a href="/tags/CTF/">CTF</a>
     
-</span>
-    </div>
-</div>
-  <div class="card">
-    <h2 class="bigtitle">Updated Website</h2>
-    <div style="clear: both;"></div>
-    <div class="desctext">
-        <div class="desc">
-            
+ </span
+                ><br />
+            </div>
         </div>
-        <a href="/2019/12/25/Updated-Website/#more">Читать далее</a>
-        <span class="tag">
-    
-        <a href="/tags/Misc/">Misc</a>
-    
-</span>
     </div>
-</div>
- 
 </div>
 
                 </div>
